@@ -1,0 +1,17 @@
+<div class="overlay" ng-show="add">
+  <div class="add-content">
+    <h3>Add a notification</h3>
+    <label>
+      Title:
+      <input ng-model="newNotification.title" type="text">
+    </label>
+
+    <label>
+      Body:
+      <textarea ng-model="newNotification.body" rows="4" cols="20"></textarea>
+    </label>
+    <button type="button" name="button" ng-click="addNotification(newNotification)">Add</button>
+    <span class="cancel" ng-click="add = false"> or cancel </span>
+  </div>
+</div>
+

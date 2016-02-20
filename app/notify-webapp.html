@@ -1,15 +1,16 @@
 <head>
   <title> Notiy App</title>
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 
-  <!-- <div class="fake-notification">
+  <div class="fake-notification">
     <h3>Like what you see?</h3>
     <p>
       Follow me @thomaschinery or visit my website.
     </p>
-  </div> -->
+  </div>
 
   <div class="intro">
     <h1>Notify</h1>
@@ -20,12 +21,17 @@
   </div>
 
   <section  ng-app="notifyapp" class="app">
+    <add-notification></add-notification>
     <div class="controls">
-
+      <span>Notify</span>
+      <i class="fa fa-plus right" ng-click="this.$emit('addNotification')"></i>
     </div>
 
-    <div class="list">
-
+    <div ng-controller="notificationsListController" class="list">
+      <div class="notification" ng-repeat="notification in notifications">
+        {{ notification.title }}
+        {{ notification.body }}
+      </div>
     </div>
 
   </section>

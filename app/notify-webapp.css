@@ -2,6 +2,7 @@
 body {
   background-image: linear-gradient(45deg, rgb(244, 156, 20) 0%, rgb(241, 196, 15) 100%);
   width: 100vw;
+  min-width: 700px;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -23,16 +24,42 @@ p {
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
-  width: 80%;
+  /*width: 80%;*/
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 }
 
 .intro {
-  width: 60vw;
+  width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+
+.fake-notification {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  width: 300px;
+  height: auto;
+  color: #788692;
+  padding: 10px;
+}
+
+.fake-notification h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fake-notification p {
+  color: #788692;
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 /* app declarations go here */
@@ -49,7 +76,7 @@ section.app {
 }
 
 .controls {
-  height: 40px;
+  height: 45px;
   display: block;
   background-color: #FBFBFB;
   border-bottom: 1px solid #d0d4d9;

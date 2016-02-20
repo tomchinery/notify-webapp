@@ -1,0 +1,46 @@
+/* CSS declarations go here */
+body {
+  background-image: linear-gradient(45deg, rgb(244, 156, 20) 0%, rgb(241, 196, 15) 100%);
+  width: 100vw;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+p {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.intro {
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* app declarations go here */
+
+section.app {
+  width: 700px;
+  background-color: #fff;
+  margin: 0 auto;
+  height: 600px;
+  margin-bottom: 30px;
+}

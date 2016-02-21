@@ -18,6 +18,7 @@
 
     <add-notification></add-notification>
     <delete-notification></delete-notification>
+    <edit-notification></edit-notification>
 
     <div class="controls">
       <span>Notify</span>
@@ -38,7 +39,7 @@
         <div class="right-hover-container">
           <div class="right-hover-controls">
             <i class="fa fa-clock-o time"></i>
-            <i class="fa fa-pencil edit"></i>
+            <i class="fa fa-pencil edit" ng-click="this.$emit('editNotification', notification)"></i>
             <i class="fa fa-bell test" ng-click="this.$emit('showNotification', notification)"></i>
           </div>
         </div>
@@ -104,7 +105,7 @@
 
   <footer>
     <p>
-      &copy; 2016 Tom Chinery
+      &copy; 2016 Tom Chinery <a href="http://tomchinery.com/" target="_blank">tomchinery.com</a>
     </p>
   </footer>
 </body>

@@ -303,6 +303,14 @@ footer p {
   margin-top: 40px;
 }
 
+a {
+  color: rgb(53, 152, 220);
+}
+
 .bt h1 {
   margin-top: 10px;
+}
+
+footer a {
+  color: rgba(255,255,255,0.5);
 }

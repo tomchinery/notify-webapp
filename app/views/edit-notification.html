@@ -3,14 +3,14 @@
     <h3>Edit notification</h3>
     <label>
       Title:
-      <input ng-model="n.title" type="text">
+      <input ng-model="en.title" type="text">
     </label>
 
     <label>
       Body:
-      <textarea ng-model="n.body" rows="4" cols="20"></textarea>
+      <textarea ng-model="en.body" rows="4" cols="20"></textarea>
     </label>
-    <button type="button" name="button" ng-click="updateNotification(n)">Edit</button>
-    <span class="cancel" ng-click="add = false"> or cancel </span>
+    <button type="button" name="button" ng-click="edit = false">Edit</button>
+    <span class="cancel" ng-click="edit = false"> or cancel </span>
   </div>
 </div>

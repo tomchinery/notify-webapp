@@ -93,6 +93,29 @@ if (Meteor.isClient) {
     }
   ])
 
+  angular.module('notifyapp').directive('editNotification',
+    function () {
+      return {
+        restrict: 'E',
+        templateUrl: 'views/edit-notification.html',
+        controller: 'editNController'
+      }
+    }
+  )
+
+  angular.module('notifyapp').controller('editNController', ['$scope', '$meteor',
+    function ($scope, $meteor) {
+      $scope.notifications = $meteor.collection(Notifications)
+      $scope.edit = false
+
+      $scope.$on('editNotification', function (e, n) {
+        $scope.old = angular.copy(n)
+        $scope.en = n
+        $scope.edit = true
+      })
+    }
+  ])
+
 }
 
 if (Meteor.isServer) {

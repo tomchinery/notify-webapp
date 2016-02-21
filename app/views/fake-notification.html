@@ -1,8 +1,8 @@
 <div class="fn-contain">
-  <div class="fake-notification" ng-show="n">
-    <h3>{{ n.title }}</h3>
+  <div class="fake-notification" ng-show="fn" ng-click="fn = undefined">
+    <h3>{{ fn.title }}</h3>
     <p>
-      {{ n.body }}
+      {{ fn.body }}
     </p>
   </div>
   <div class="fake-notification">

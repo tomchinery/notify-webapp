@@ -84,9 +84,9 @@ if (Meteor.isClient) {
     function ($scope, $timeout) {
 
       $scope.$on('showNotification', function (e, n) {
-        $scope.n = n
+        $scope.fn = n
         $timeout(function () {
-          $scope.n = undefined
+          $scope.fn = undefined
         }, 5000)
       })
 

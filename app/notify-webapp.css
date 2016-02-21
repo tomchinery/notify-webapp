@@ -216,7 +216,8 @@ section.app {
   z-index: 9999;
 }
 
-.add-content {
+.add-content,
+.delete-content {
   position: relative;
   background-color: white;
   border-radius: 4px;

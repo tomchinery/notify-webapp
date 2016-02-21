@@ -22,6 +22,8 @@
 
   <section  ng-app="notifyapp" class="app">
     <add-notification></add-notification>
+    <delete-notification></delete-notification>
+
     <div class="controls">
       <span>Notify</span>
       <i class="fa fa-plus right" ng-click="this.$emit('addNotification')"></i>
@@ -31,7 +33,7 @@
       <div class="notification" ng-repeat="notification in notifications">
         <div class="left-hover-container">
           <div class="left-hover-controls">
-            <i class="fa fa-times danger"></i>
+            <i class="fa fa-times danger" ng-click="this.$emit('deleteNotification', notification)"></i>
           </div>
         </div>
         <h3>{{ notification.title }}</h3>

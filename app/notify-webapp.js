@@ -41,6 +41,35 @@ if (Meteor.isClient) {
     }
   ])
 
+  angular.module('notifyapp').directive('deleteNotification',
+    function () {
+      return {
+        restrict: 'E',
+        templateUrl: 'views/delete-notification.html',
+        controller: 'deleteNController'
+      }
+    }
+  )
+
+  angular.module('notifyapp').controller('deleteNController', ['$scope', '$meteor',
+    function ($scope, $meteor) {
+      $scope.notifications = $meteor.collection(Notifications)
+      $scope.delete = false
+
+      $scope.$on('deleteNotification', function (e, d) {
+        $scope.n = d
+        $scope.delete = true
+      })
+
+      $scope.removeN = function () {
+        if ($scope.n) {
+          $scope.notifications.remove($scope.n)
+          $scope.delete = false
+        }
+      }
+    }
+  ])
+
 }
 
 if (Meteor.isServer) {

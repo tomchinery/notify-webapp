@@ -70,6 +70,29 @@ if (Meteor.isClient) {
     }
   ])
 
+  angular.module('notifyapp').directive('fakeNotification',
+    function () {
+      return {
+        restrict: 'E',
+        templateUrl: 'views/fake-notification.html',
+        controller: 'fakeNotificationController'
+      }
+    }
+  )
+
+  angular.module('notifyapp').controller('fakeNotificationController', ['$scope', '$timeout',
+    function ($scope, $timeout) {
+
+      $scope.$on('showNotification', function (e, n) {
+        $scope.n = n
+        $timeout(function () {
+          $scope.n = undefined
+        }, 5000)
+      })
+
+    }
+  ])
+
 }
 
 if (Meteor.isServer) {

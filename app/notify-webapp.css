@@ -37,7 +37,7 @@ p {
 }
 
 .fake-notification {
-  position: absolute;
+  position: fixed;
   right: 30px;
   top: 30px;
   background-color: #fff;
@@ -106,6 +106,105 @@ section.app {
   display: inline-block;
 }
 
+.notification {
+  padding: 20px;
+  position: relative;
+  border-bottom: 1px solid #d0d4d9;
+}
+
+.notification p {
+  color: #788692;
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.left-hover-container {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  top: 0;
+}
+
+.left-hover-controls {
+  display: none;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.01) 98%, transparent 100%);
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.left-hover-container:hover .left-hover-controls {
+  display: block;
+}
+
+.right-hover-container {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 45%;
+  top: 0;
+}
+
+.right-hover-controls {
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.01) 98%, transparent 100%);
+  position: absolute;
+  right: 0;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.right-hover-container:hover .right-hover-controls {
+  display: block;
+}
+
+.notification i {
+  background-color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.26);
+  font-size: 16px;
+  position: relative;
+  left: 25%;
+  top: 38%;
+  margin-left: 5px;
+  transition: 0.5s color;
+  cursor: pointer;
+}
+
+.right-hover-controls i {
+  margin-left: 15px;
+  left: 17%;
+}
+
+.danger:hover {
+  transition: all 400ms;
+  color: rgb(232, 76, 61);
+}
+
+.edit:hover {
+  transition: all 400ms;
+  color: rgb(53, 152, 220);
+}
+
+.time:hover {
+  transition: all 400ms;
+  color: rgb(241, 196, 15);
+}
+
+.test:hover {
+  transition: all 400ms;
+  color: rgb(47, 204, 113);
+}
+
+
 /* add notification */
 
 .overlay {
@@ -114,6 +213,7 @@ section.app {
   width: 100%;
   background-color: rgba(0,0,0,0.26);
   border-radius: 4px;
+  z-index: 9999;
 }
 
 .add-content {
@@ -143,7 +243,7 @@ label {
 input,
 textarea {
   color: #788692;
-  border: 2px solid #788692;
+  border: 2px solid #d0d4d9;
   border-radius: 4px;
   font-size: 16px;
   padding: 10px;

@@ -27,7 +27,6 @@ if (Meteor.isClient) {
       $scope.add = false
 
       $scope.$on('addNotification', function () {
-        console.log('YEN1')
         $scope.add = true
       })
 
@@ -37,7 +36,7 @@ if (Meteor.isClient) {
           body: newNotification.body,
           createdAt: new Date()
         })
-        console.log($scope.notifications)
+        $scope.add = false
       }
     }
   ])

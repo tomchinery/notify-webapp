@@ -16,7 +16,7 @@
     <h1>Notify</h1>
     <p>
       The scope of this project far exceeds this hackathon. Bearing this in mind
-      I am submitting a sample app that demonstrates some key features and UI.
+      I am submitting a sample app that demonstrates more of a proof of concept.
     </p>
   </div>
 
@@ -29,11 +29,46 @@
 
     <div ng-controller="notificationsListController" class="list">
       <div class="notification" ng-repeat="notification in notifications">
-        {{ notification.title }}
-        {{ notification.body }}
+        <div class="left-hover-container">
+          <div class="left-hover-controls">
+            <i class="fa fa-times danger"></i>
+          </div>
+        </div>
+        <h3>{{ notification.title }}</h3>
+        <p>
+          {{ notification.body }}
+        </p>
+        <div class="right-hover-container">
+          <div class="right-hover-controls">
+            <i class="fa fa-clock-o time"></i>
+            <i class="fa fa-pencil edit"></i>
+            <i class="fa fa-bell test"></i>
+          </div>
+        </div>
       </div>
     </div>
-
   </section>
 
+  <div class="intro">
+    <h1>Vision</h1>
+    <p>
+      The vision of notify is to be able to create and schedule custom notifications
+      on every platform in one place. The idea came to me when I was frustrated
+      with to-do app notifications, I was setting up my to-do's each day but would
+      only get notified on one platform.
+    </p>
+
+    <p>
+      I still want to explore some features which are not in the app above. Such
+      as being able to schedule a notification for a specific platform, better
+      date and time selection, and using device gestures.
+    </p>
+
+    <p>
+      The reason why I say the project is out of scope of this hackathon is that
+      I plan on pursuing this idea and releasing the app on multiple platforms in
+      the coming months.
+    </p>
+
+  </div>
 </body>
